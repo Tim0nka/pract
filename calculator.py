@@ -1,60 +1,50 @@
-def summa(first, second):
+def summa(item, result):
+    return item + result
 
-    return first + second
+def sub(item2, result):
+    return item2 - result
+   
 
+def mult(item3, result):
+    return item3 * result
+    
 
-def sub(first, second):
-
-    return first - second
-
-
-def mult(first, second):
-
-    return first * second
-
-
-def div(first, second):
-
-    return first / second
+def div(item4, result):
+     return item4 / result
+    
 
 user_input = input('Введите пример: ')
 
 
 if '+' in user_input:
     user_input_list = user_input.split('+')
-    result = 0
-    for i in range (0,len(user_input)):
-        user_input_list[i]=float.user_input_list[i]
-        result = summa( result,user_input[i])
+    result = float(user_input_list[0])
+    for i in range (1,len(user_input_list)):
+        user_input_list[i]=float(user_input_list[i])
+        result = summa(user_input_list[i],result)
+    print(result)
 
 
 if '-' in user_input:
     user_input_list = user_input.split('-')
-    result = 0
+    result = float(user_input_list[0])
     for i in range (0,len(user_input)):
-        user_input_list[i]=float.user_input_list[i]
-        result = sub( result,user_input[i])
-
+        user_input_list[i]=float(user_input_list[i])
+        result = sub(user_input_list[i],result)
+    print(result)
 
 if '*' in user_input:
     user_input_list = user_input.split('*')
-    result = 0
+    result = float(user_input_list[0])
     for i in range (0,len(user_input)):
-        user_input_list[i]=float.user_input_list[i]
-        result = mult( result,user_input[i])
-
+        user_input_list[i]=float(user_input_list[i])
+        result = mult(user_input[i],result)
+    print(result)
 
 if '/' in user_input:
-    user_input_list = user_input.split('+')
-    result = 0
+    user_input_list = user_input.split('/')
+    result = float(user_input_list[0])
     for i in range (0,len(user_input)):
-        user_input_list[i]=float.user_input_list[i]
+        user_input_list[i]=float(user_input_list[i])
         result = div( result,user_input[i])
-
-
-for i in range (0,len(user_input)):
-    user_input[1]=float.user_input[i]
-result = add( user_input[i],user_input[1])
-print(result)
-
-
+    print(result)
